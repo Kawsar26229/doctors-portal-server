@@ -49,6 +49,9 @@ async function run() {
             next();
         }
 
+        app.get('/', async(req, res) => {
+            res.json({message: 'Welcome To Doctors Portal'})
+        })
         app.get('/appointmentOptions', async(req, res) => {
             const date = req.query.date;
             const query = {};
